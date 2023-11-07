@@ -1,0 +1,14 @@
+#container {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    flex-wrap: wrap;
+
+}
+.gridItem {
+    flex-grow: 1;
+    border: 2px solid black;
+    height: 10px;
+    width: 10px;
+
+}
