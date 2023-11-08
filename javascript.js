@@ -1,23 +1,13 @@
 const contenedor = document.getElementById('container');
-// function createDiv() {
-//     const div = document.createElement('div');
-//     div.classList.add("gridItem");
-//     contenedor.appendChild(div)
-// }
-const rows = 16;
-const columns= 16;
+const rows = 11;
+const columns= 11;
 
-for(let i = 0; i < rows * rows; i++) {
+for(let i = 0; i < rows; i++) {
+    for(let j = 0; j < rows; j++) {
         const div = document.createElement('div');
         div.classList.add("gridItem");
         contenedor.appendChild(div)
-    
+    }
 }
-
-// for(let i = 0; i < rows; i++) {
-//     for(let j = 0; j < rows; j++) {
-//         const div = document.createElement('div');
-//         div.classList.add("gridItem");
-//         contenedor.appendChild(div)
-//     }
-// }
+contenedor.style.gridTemplateColumns = `repeat(${columns}, auto)`;
+contenedor.style.gridTemplateRows = `repeat(${rows}, auto)`;
